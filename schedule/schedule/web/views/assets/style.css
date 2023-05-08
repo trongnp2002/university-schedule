@@ -1,0 +1,503 @@
+
+/* Reset CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* 
+Nguyên tắc:
+1. Từ trên xuống dưới
+2. Từ ngoài vào trong
+3. Tổng quan đến chi tiết
+*/
+
+/* 
+1. Vị trí
+2. Kích thước
+3. Màu sắc
+4. Kiểu dáng
+*/
+
+
+header{
+    height: 84px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    white-space: nowrap;
+    flex-wrap: wrap;
+    justify-content:  space-between;
+    align-items: center;
+    z-index: 1;
+    padding-right : 12px;
+    box-sizing: border-box;
+}
+.fptIcon{
+    height:44px;
+    width: 231px;
+    background: url(image/img-logo.jpg) no-repeat center center;
+    background-size: cover;
+}
+header .profile{
+
+}
+.profile{
+    margin-left: 159px;
+    width: 64px;
+    height: 64px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 24px;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.profile .ti-user{
+    font-size: 24px;
+
+}
+#nav{
+    margin-left: 0;
+}
+#nav, .subnav{
+    list-style-type: none;
+}
+#nav > li{
+    display: inline-block;
+}
+#nav li{
+    position: relative;
+}
+#nav li a{
+    text-decoration: none;
+    display: block;
+}
+#nav>li>a{
+    color: white;
+    text-transform: uppercase;
+    padding: 0 24px;
+    line-height: 84px;
+}
+
+#nav li:hover .subnav{
+    display: block;
+}
+#nav>li:hover>a,
+#nav .subnav li:hover a,
+.profile .subnav li:hover{
+    background-color: #ccc;
+    color: black;
+}
+#nav .subnav{
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.profile .subnav{
+    display: none;
+    background-color: #fff;
+    border-radius: 4px;
+    position: absolute;
+    top: 76px;
+    right: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.profile .subnav li{
+    min-width: 320px;
+
+    color: black;
+    text-decoration: none;
+    line-height: 40px;
+    padding: 0 12px;
+    display: block;
+}
+#nav .subnav li{
+    display: block;
+    min-width: 200px;
+}
+#nav .subnav li a{
+    color: black;
+    padding: 0 12px;
+    line-height: 38px;
+}
+
+#nav .ti-widget-alt{
+    font-size: 12px;
+}
+#slide{
+    margin-top: 84px;
+    height: 400px;
+    width: 100%;
+    background: url(image/nha-alpha.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+/*for container */
+#container{
+    height : 1000px;
+
+
+}
+/*1. sidebar*/
+.openMenuButton{
+    width: 30px;
+    height: 30px;
+}
+.ti-menu{
+    font-size: 30px;
+}
+#sidebar{
+    padding: 0 12px;
+    position: relative;
+    height: 100%;
+    width: 16%;
+    box-sizing: border-box;
+    float: left;
+}
+#theMenu{
+    position: absolute;
+    top:0;
+    left:0px;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: #3d3d3d;
+    font-size: 20px;
+}
+#sidebar ul{
+    margin-bottom: 20px;
+}
+
+#sidebar h3{
+    text-align: left;
+    background-color:rgb(242, 153, 74);
+    color: aliceblue;
+    margin-bottom: 20px;
+    padding: 12px 12px;
+    line-height: 32px;
+}
+#sidebar h4{
+    color: rgb(242, 153, 74);
+    padding: 8px 8px;
+}
+
+#sidebar li{
+    padding-left: 40px;
+    display: block;
+
+}
+#sidebar li a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    line-height: 36px;
+}
+#sidebar li:hover {
+    background-color: rgb(242, 153, 74);
+    color: #fff;
+}
+/*2. content*/
+#content{
+    float: right;
+    width: 84%;
+    height: 100%;
+    background-color: #ccc;
+    padding: 12px;
+
+}
+#content h2{
+    padding: 12px;
+    font-weight: 500;
+
+}
+main{
+    width: 100%;
+    margin-top: 12px;
+    background-color: #ccc;
+    height: 800px;
+    padding: 12px;
+
+}
+
+.selection{
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    height: 10%;
+}
+.selection h3{
+    min-width: 160px;
+}
+
+.selection input{
+    padding: 12px;
+    max-width: 200px;
+    margin-left: 12px;
+    line-height: 0px;
+    background: rgba(242, 153, 74, 0.1);
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 8px;
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+.selection input:hover{
+    background: rgba(242, 153, 74, 0.4);
+    box-shadow: 0px 0px 0px 1px #f2994a;
+    color: #007bff;
+}
+#result{
+    height: 80%;
+    position: relative;
+    width: 100%;
+}
+.option{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60%;
+    display: none;
+}
+
+
+/*footer*/
+footer {
+    margin-top: 8px;
+    height: 10vh;
+    width: 100vw;
+    background-color: #000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -5px -5px 10px rgba(0,0,0,0.3);
+}
+footer > p {
+    text-align: center;
+    font-family: 'system-ui';
+    letter-spacing: 3px;
+}
+footer > p > a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+/*form delete*/
+.delResult{
+    min-height: 500px;
+    width: 100%;
+}
+.dataNotFound{
+    height: 500px;
+    width: 100%;
+    background: url(image/49e58d5922019b8ec4642a2e2b9291c2.png) no-repeat center center;
+    background-size: cover;
+}
+
+#sub:hover input{
+    background-color: rgb(242, 153, 74);
+}
+#form2 h3{
+    width: 100%;
+}
+#form2 input, #form3 input{
+    border: 1px solid black;
+    border-radius: 8px;
+}
+.forInput{
+    width: 100%;
+    height: 10%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 8px;
+}
+.theId{
+    width: 200px;
+    height: 30px;
+    outline: 0;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 4px;
+}
+/*form select*/
+
+
+form{
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.sel{
+    width: 80px;
+    border-radius: 16px;
+    text-align: center;
+    height: 28px;
+}
+
+
+/*update*/
+#formPop h3,
+#form1 h3,
+#form4 h3{
+    align-items: center;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+#form4 table,
+#form1 table{
+    width: 48%;
+    font-family: serif;
+    height: 100%;
+    color:   #3d3d3d;
+    padding: 32px;
+    border: 1px solid white;
+    outline: 0;
+    border-radius: 40px;
+    font-size: 24px;
+}
+#formPop table{
+    width: 100%;
+    font-family: serif;
+    height: 100%;
+    color:   #3d3d3d;
+    padding: 32px;
+    outline: 0;
+    border-radius: 40px;
+    font-size: 24px;
+    background-color: #f2994a;
+}
+#formPop input,
+#form4 input,
+#form1 input{
+    width: 100%;
+    height: 32px;
+    outline: 0;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding-left: 8px;
+    margin-bottom: 8px;
+}
+table td{
+    padding: 8px;
+}
+.submit{
+    margin-top: 8px;
+    width: 50%;
+    color:#3d3d3d;
+    font-size: 20px;
+}
+.subdel{
+    display: inline-block;
+    text-align:center;
+    font-size: 12px;
+    padding: 8px;
+    margin-top: 8px;
+    color:#3d3d3d;
+}
+/*form create*/
+
+.subhovdel{
+    display: inline-block;
+}
+.subhovdel:hover input,
+.subhov:hover input{
+    color: #4ca520;
+    background-color: rgb(242, 153, 74);
+}
+
+.year{
+    width: 50%;
+    border-radius: 16px;
+    text-align: center;
+    height: 32px;
+}
+
+#forData{
+    width: 100%;
+    height: 580px;
+    border: 2px solid #ccc;
+}
+#forData table thead{
+    height: 80px;
+    background-color: #f2994a;
+
+}
+#forData table th{
+    padding: 0 8px;
+    font-size: 20px;
+}
+
+#forData table tr{
+    height: 72px;
+    padding: 0 8px;
+    font-size: 16px;
+}
+
+
+.popupForm{
+    height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    display:none;
+}
+#formPop{
+    width: 90%;
+
+}
+.popupContent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 44%;
+}
+.popupHeader{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    align-items: center;
+    height: 40px;
+}
+.ti-close{
+    font-size: 32px;
+
+    padding: 12px;
+    border-radius: 8px;
+    color: white;
+}
+.ti-close:hover{
+    background-color: #3d3d3d;
+
+}
